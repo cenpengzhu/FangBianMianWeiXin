@@ -6,10 +6,12 @@ def hello(request):
 
 def AcessConfirm(request):
     if request.method=='GET':
-        SignNature = request.GET.get('signature',default='110')
-        TimeStamp = request.GET.get('timestamp',default=0)
+        SignNature = request.GET.get('signature',default='')
+        TimeStamp = request.GET.get('timestamp',default='')
         Nonce = request.GET.get('nonce',default = '')
         EchoStr = request.GET.get('echostr',default='')
+        if SignNature == '' or TimeStamp == '' or Nonce == '' or EchoStr == '' :
+            return HttpResponse('wrong param!')
         Token = ''
 
         StrList = [Token,TimeStamp,Nonce]

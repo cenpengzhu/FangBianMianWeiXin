@@ -20,5 +20,5 @@ from . import view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$',view.hello)
+    url(r'^$',view.AcessConfirm)
 ]
