@@ -20,5 +20,5 @@ from . import view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$',view.AcessConfirm)
+    url('weixininterface',view.AcessConfirm)
 ]

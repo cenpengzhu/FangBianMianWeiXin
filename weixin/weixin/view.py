@@ -12,7 +12,7 @@ def AcessConfirm(request):
         EchoStr = request.GET.get('echostr',default='')
         if SignNature == '' or TimeStamp == '' or Nonce == '' or EchoStr == '' :
             return HttpResponse('wrong param!')
-        Token = ''
+        Token = 'tokenofnazhefangbianmian'
 
         StrList = [Token,TimeStamp,Nonce]
         StrList.sort()
